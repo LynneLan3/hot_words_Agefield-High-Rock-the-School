@@ -65,13 +65,9 @@ vercel --prod           # 正式发布到生产环境
 
 ## 3. 部署后：正式 URL 在哪里替换
 
-项目里所有地方都用了一个**占位域名**：
+> **状态：已完成替换。** 正式域名是：`https://hot-words-agefield-high-rock-the-sc.vercel.app`
 
-```
-https://agefield-high-guide.vercel.app
-```
-
-拿到 Vercel 分配的真实域名后，需要在以下 **4 个文件**里，把占位域名替换成你的真实域名（原样保留路径部分即可）：
+项目最初用了一个占位域名 `agefield-high-guide.vercel.app`，现在已经全部替换为上面这个真实的 Vercel 域名。如果之后又更换了域名（比如换成自己购买的正式域名），需要在以下 **4 个文件**里，把域名替换成新的（原样保留路径部分即可）：
 
 | 文件 | 需要替换的内容 |
 |---|---|
@@ -80,16 +76,14 @@ https://agefield-high-guide.vercel.app
 | `robots.txt` | `Sitemap:` 那一行 |
 | `sitemap.xml` | 两个 `<loc>` |
 
-最快的替换方式（在项目根目录执行，把 `你的真实域名.vercel.app` 换成实际域名）：
+最快的替换方式（在项目根目录执行，把两个域名换成实际的新旧域名）：
 
 ```bash
-grep -rl "agefield-high-guide.vercel.app" . --include="*.html" --include="*.xml" --include="*.txt" \
-  | xargs sed -i '' "s/agefield-high-guide.vercel.app/你的真实域名.vercel.app/g"
+grep -rl "旧域名" . --include="*.html" --include="*.xml" --include="*.txt" \
+  | xargs sed -i '' "s/旧域名/新域名/g"
 ```
 
-替换后重新 `vercel --prod` 部署一次即可。
-
-> 如果后续你换成了自己购买的正式域名（而不是 `.vercel.app`），同样只需要替换上面这几个文件里的域名，方法一样。
+替换后 `git commit` + `git push`（如果连了 GitHub，Vercel 会自动重新部署），或者手动 `vercel --prod` 部署一次即可。
 
 ---
 
@@ -103,7 +97,7 @@ grep -rl "agefield-high-guide.vercel.app" . --include="*.html" --include="*.xml"
 
 1. 打开 [Google Search Console](https://search.google.com/search-console)
 2. 选择「网址前缀」类型（不是「域名」类型，网址前缀验证更快、更适合单页实验）
-3. 输入你的正式 URL，例如 `https://你的真实域名.vercel.app/`
+3. 输入你的正式 URL，例如 `https://hot-words-agefield-high-rock-the-sc.vercel.app/`
 4. 推荐验证方式：**HTML 标签验证**
    - Google 会给你一行 `<meta name="google-site-verification" content="xxxx">`
    - 把这行加到 `index.html` 的 `<head>` 里（放在 `</head>` 之前任意位置即可），保存后重新部署
@@ -114,7 +108,7 @@ grep -rl "agefield-high-guide.vercel.app" . --include="*.html" --include="*.xml"
 ## 6. 如何进行 URL Inspection（网址检查）
 
 1. 在 Search Console 左上角搜索框，粘贴完整 URL：
-   `https://你的真实域名.vercel.app/agefield-high-rock-the-school/`
+   `https://hot-words-agefield-high-rock-the-sc.vercel.app/agefield-high-rock-the-school/`
 2. 按回车，等待检查结果
 3. 查看是否显示「网址已收录」或「网址可以收录」
 
@@ -135,7 +129,7 @@ grep -rl "agefield-high-guide.vercel.app" . --include="*.html" --include="*.xml"
    ```
    sitemap.xml
    ```
-   （Search Console 会自动拼接成 `https://你的真实域名.vercel.app/sitemap.xml`）
+   （Search Console 会自动拼接成 `https://hot-words-agefield-high-rock-the-sc.vercel.app/sitemap.xml`）
 3. 点击「提交」
 
 ---

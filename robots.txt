@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://agefield-high-guide.vercel.app/sitemap.xml
+Sitemap: https://hot-words-agefield-high-rock-the-sc.vercel.app/sitemap.xml
