@@ -1,0 +1,210 @@
+/* LaunchWire – minimal, fast, wiki-style layout. No JS, no frameworks. */
+
+:root {
+  --max-width: 760px;
+  --color-text: #1f2328;
+  --color-muted: #57606a;
+  --color-border: #d8dee4;
+  --color-bg: #ffffff;
+  --color-bg-soft: #f6f8fa;
+  --color-accent: #a4262c;
+  --color-link: #0b5fae;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: var(--color-text);
+  background: var(--color-bg);
+  line-height: 1.6;
+  font-size: 17px;
+}
+
+a {
+  color: var(--color-link);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+header.site-header {
+  border-bottom: 1px solid var(--color-border);
+  padding: 14px 20px;
+}
+
+.site-header .brand {
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--color-text);
+}
+
+main {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 28px 20px 60px;
+}
+
+.home-main {
+  max-width: 560px;
+  text-align: left;
+}
+
+h1 {
+  font-size: 1.7rem;
+  line-height: 1.3;
+  margin: 0 0 12px;
+}
+
+h2 {
+  font-size: 1.3rem;
+  margin: 36px 0 12px;
+  padding-top: 8px;
+  border-top: 1px solid var(--color-border);
+}
+
+h3 {
+  font-size: 1.05rem;
+  margin: 20px 0 8px;
+}
+
+p {
+  margin: 0 0 14px;
+}
+
+.tagline {
+  color: var(--color-muted);
+  font-size: 1.05rem;
+}
+
+.cta {
+  display: inline-block;
+  margin-top: 18px;
+  padding: 10px 16px;
+  border: 1px solid var(--color-accent);
+  border-radius: 6px;
+  color: var(--color-accent);
+  font-weight: 600;
+}
+
+.cta:hover {
+  background: var(--color-accent);
+  color: #fff;
+  text-decoration: none;
+}
+
+.meta-line {
+  color: var(--color-muted);
+  font-size: 0.9rem;
+  margin: 0 0 20px;
+}
+
+.toc {
+  background: var(--color-bg-soft);
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  padding: 14px 18px;
+  margin: 0 0 28px;
+}
+
+.toc p {
+  margin: 0 0 8px;
+  font-weight: 600;
+}
+
+.toc ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.toc li {
+  margin: 4px 0;
+}
+
+table.quick-facts {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 0 24px;
+  font-size: 0.96rem;
+}
+
+table.quick-facts th,
+table.quick-facts td {
+  border: 1px solid var(--color-border);
+  padding: 8px 12px;
+  text-align: left;
+  vertical-align: top;
+}
+
+table.quick-facts th {
+  width: 34%;
+  background: var(--color-bg-soft);
+  font-weight: 600;
+}
+
+.unconfirmed {
+  color: var(--color-muted);
+  font-style: italic;
+}
+
+.faq-item {
+  margin: 0 0 20px;
+}
+
+.faq-item h3 {
+  margin-bottom: 6px;
+}
+
+.note-box {
+  background: var(--color-bg-soft);
+  border-left: 3px solid var(--color-accent);
+  padding: 10px 14px;
+  margin: 0 0 20px;
+  font-size: 0.95rem;
+}
+
+footer.site-footer {
+  border-top: 1px solid var(--color-border);
+  margin-top: 40px;
+  padding: 20px;
+  text-align: center;
+  color: var(--color-muted);
+  font-size: 0.85rem;
+}
+
+.internal-links {
+  margin-top: 30px;
+  padding-top: 16px;
+  border-top: 1px solid var(--color-border);
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 16px;
+  }
+
+  h1 {
+    font-size: 1.4rem;
+  }
+
+  h2 {
+    font-size: 1.15rem;
+  }
+
+  main {
+    padding: 20px 16px 48px;
+  }
+
+  table.quick-facts th {
+    width: 40%;
+  }
+}
