@@ -1,22 +1,30 @@
 # LaunchWire – Agefield High SEO 实验
 
-一个极简的静态网站,只有 2 个页面,目标是用 Google Search Console 验证
-「Agefield High: Rock the School」是否存在真实的 Google 搜索需求。
+一个极简的静态微型站，目标是验证「Agefield High: Rock the School」能否通过
+提前上线、准确内容和针对真实搜索意图的页面，在 Google 获得 impressions / clicks。
+
+当前结构：**1 个 Hub + 4 个高置信 SEO 子页面**。
 
 技术方案：纯静态 HTML + CSS，无框架、无数据库、无后台、无 API。可以直接部署到 Vercel。
 
 ## 目录结构
 
 ```
-index.html                              首页(网站名 + 一句话说明 + 链接)
+index.html                              首页
 agefield-high-rock-the-school/
-  index.html                            核心 SEO 页面
+  index.html                            Hub 总览页
+  release-date/index.html               发布日期 & 平台
+  system-requirements/index.html        PC 配置要求
+  characters/index.html                 角色（Sam / Kale / Axel）
+  gameplay/index.html                   玩法 & 学校生活
 styles.css                               全站共用样式
-favicon.svg                              占位 favicon
+favicon.svg
 robots.txt
 sitemap.xml
 vercel.json                              强制 URL 带斜杠(保证 canonical 一致)
 ```
+
+正式站点：`https://hot-words-agefield-high-rock-the-sc.vercel.app/`
 
 ---
 
@@ -37,7 +45,11 @@ npx serve .
 终端会给出一个本地地址，通常是：
 
 - 首页：http://localhost:3000/
-- 核心页面：http://localhost:3000/agefield-high-rock-the-school/
+- Hub：http://localhost:3000/agefield-high-rock-the-school/
+- Release Date：http://localhost:3000/agefield-high-rock-the-school/release-date/
+- System Requirements：http://localhost:3000/agefield-high-rock-the-school/system-requirements/
+- Characters：http://localhost:3000/agefield-high-rock-the-school/characters/
+- Gameplay：http://localhost:3000/agefield-high-rock-the-school/gameplay/
 
 （如果 3000 端口被占用，终端会提示实际使用的端口号。）
 
@@ -72,9 +84,9 @@ vercel --prod           # 正式发布到生产环境
 | 文件 | 需要替换的内容 |
 |---|---|
 | `index.html` | `<link rel="canonical">` 和 `og:url` |
-| `agefield-high-rock-the-school/index.html` | `<link rel="canonical">`、`og:url`、JSON-LD 里的 `"url"` |
+| `agefield-high-rock-the-school/**/index.html` | `<link rel="canonical">`、`og:url`、JSON-LD 里的 URL |
 | `robots.txt` | `Sitemap:` 那一行 |
-| `sitemap.xml` | 两个 `<loc>` |
+| `sitemap.xml` | 全部 `<loc>` |
 
 最快的替换方式（在项目根目录执行，把两个域名换成实际的新旧域名）：
 
@@ -107,10 +119,11 @@ grep -rl "旧域名" . --include="*.html" --include="*.xml" --include="*.txt" \
 
 ## 6. 如何进行 URL Inspection（网址检查）
 
-1. 在 Search Console 左上角搜索框，粘贴完整 URL：
+1. 在 Search Console 左上角搜索框，粘贴完整 URL，例如：
    `https://hot-words-agefield-high-rock-the-sc.vercel.app/agefield-high-rock-the-school/`
 2. 按回车，等待检查结果
 3. 查看是否显示「网址已收录」或「网址可以收录」
+4. 建议同样检查 4 个子页面：`release-date/`、`system-requirements/`、`characters/`、`gameplay/`
 
 ---
 
@@ -118,7 +131,7 @@ grep -rl "旧域名" . --include="*.html" --include="*.xml" --include="*.txt" \
 
 1. 完成第 6 步的网址检查后，页面右上角会有「**请求编入索引 / Request Indexing**」按钮
 2. 点击后 Google 会重新抓取这个 URL（一般几分钟到几天内生效，不保证立即收录）
-3. 建议对首页 `/` 和核心页面 `/agefield-high-rock-the-school/` 都分别做一次
+3. 建议对首页 `/`、Hub `/agefield-high-rock-the-school/`，以及 4 个子页面分别做一次
 
 ---
 
@@ -187,13 +200,13 @@ Decision:
 
 - [x] 本地可以正常启动（`npx serve .`）
 - [x] 首页 `/` 正常
-- [x] 核心页面 `/agefield-high-rock-the-school/` 正常
+- [x] Hub `/agefield-high-rock-the-school/` 正常
+- [x] 4 个子页面正常：release-date / system-requirements / characters / gameplay
+- [x] Hub 与子页面内部链接正确
 - [x] 移动端宽度下无明显布局问题（响应式 CSS）
-- [x] 页面源码存在正确 `<title>`
-- [x] `meta description` 正确
-- [x] `canonical` 正确（占位域名，上线后需替换，见第 3 步）
-- [x] `robots.txt` 可访问
-- [x] `sitemap.xml` 可访问，且包含核心页面
+- [x] 每页独立 `<title>` / `meta description` / self-canonical
+- [x] `robots.txt` 可访问，无 noindex
+- [x] `sitemap.xml` 可访问，且包含 Hub + 4 个子页面
 - [x] 全页仅一个 `<h1>`
-- [x] 无虚构的游戏事实（release date / 平台 / 玩法均有公开来源支持，未确认信息统一标注 "Not officially confirmed yet"）
-- [x] 未混入 school days / Degrassi / Sims 4 等无关关键词
+- [x] 无虚构的游戏事实（以 Steam / 官方公告为准，未确认信息统一标注）
+- [x] 未混入无关关键词；未引入框架 / CMS / 数据库
