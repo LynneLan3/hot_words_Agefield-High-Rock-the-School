@@ -24,7 +24,9 @@ sitemap.xml
 vercel.json                              强制 URL 带斜杠(保证 canonical 一致)
 ```
 
-正式站点：`https://hot-words-agefield-high-rock-the-sc.vercel.app/`
+正式站点：`https://agefield-high-rock-the-school.vercel.app/`
+
+> 旧域名 `hot-words-agefield-high-rock-the-sc.vercel.app` 已弃用。canonical / sitemap / robots 一律指向上面的游戏本体域名。
 
 ---
 
@@ -77,7 +79,7 @@ vercel --prod           # 正式发布到生产环境
 
 ## 3. 部署后：正式 URL 在哪里替换
 
-> **状态：已完成替换。** 正式域名是：`https://hot-words-agefield-high-rock-the-sc.vercel.app`
+> **状态：已完成替换。** 正式域名是：`https://agefield-high-rock-the-school.vercel.app`
 
 项目最初用了一个占位域名 `agefield-high-guide.vercel.app`，现在已经全部替换为上面这个真实的 Vercel 域名。如果之后又更换了域名（比如换成自己购买的正式域名），需要在以下 **4 个文件**里，把域名替换成新的（原样保留路径部分即可）：
 
@@ -109,7 +111,7 @@ grep -rl "旧域名" . --include="*.html" --include="*.xml" --include="*.txt" \
 
 1. 打开 [Google Search Console](https://search.google.com/search-console)
 2. 选择「网址前缀」类型（不是「域名」类型，网址前缀验证更快、更适合单页实验）
-3. 输入你的正式 URL，例如 `https://hot-words-agefield-high-rock-the-sc.vercel.app/`
+3. 输入你的正式 URL，例如 `https://agefield-high-rock-the-school.vercel.app/`
 4. 推荐验证方式：**HTML 标签验证**
    - Google 会给你一行 `<meta name="google-site-verification" content="xxxx">`
    - 把这行加到 `index.html` 的 `<head>` 里（放在 `</head>` 之前任意位置即可），保存后重新部署
@@ -120,7 +122,7 @@ grep -rl "旧域名" . --include="*.html" --include="*.xml" --include="*.txt" \
 ## 6. 如何进行 URL Inspection（网址检查）
 
 1. 在 Search Console 左上角搜索框，粘贴完整 URL，例如：
-   `https://hot-words-agefield-high-rock-the-sc.vercel.app/agefield-high-rock-the-school/`
+   `https://agefield-high-rock-the-school.vercel.app/agefield-high-rock-the-school/`
 2. 按回车，等待检查结果
 3. 查看是否显示「网址已收录」或「网址可以收录」
 4. 建议同样检查 4 个子页面：`release-date/`、`system-requirements/`、`characters/`、`gameplay/`
@@ -142,7 +144,7 @@ grep -rl "旧域名" . --include="*.html" --include="*.xml" --include="*.txt" \
    ```
    sitemap.xml
    ```
-   （Search Console 会自动拼接成 `https://hot-words-agefield-high-rock-the-sc.vercel.app/sitemap.xml`）
+   （Search Console 会自动拼接成 `https://agefield-high-rock-the-school.vercel.app/sitemap.xml`）
 3. 点击「提交」
 
 ---
