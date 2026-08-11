@@ -1,6 +1,6 @@
 ---
 title: "Agefield High: Rock the School Characters"
-description: "Confirmed Agefield High: Rock the School characters so far — Sam, Kale, and Axel — based only on official store and press information."
+description: "Confirmed Agefield High: Rock the School characters so far — Sam, Kale, Axel, and guidance counselor Ms. Wallace — based only on official store and press information."
 category: story
 slug: agefield-high-rock-the-school/characters
 status: pre-release
@@ -11,7 +11,7 @@ sidebar:
   label: Characters
   order: 5
   badge: Pre-release
-lastUpdated: 2026-08-09
+lastUpdated: 2026-08-11
 head:
   - tag: title
     content: "Agefield High Characters: Sam, Kale, Axel & More | LaunchWire"
@@ -43,7 +43,7 @@ head:
       }
 ---
 
-This page lists only character details that are clearly confirmed in official materials for **Agefield High: Rock the School**. The core trio featured so far is Sam, Kale, and Axel.
+This page lists only character details that are clearly confirmed in official materials for **Agefield High: Rock the School**. The core trio featured so far is Sam, Kale, and Axel. Official Steam copy also names guidance counselor Ms. Wallace.
 
 ## Sam
 
@@ -64,6 +64,11 @@ This page lists only character details that are clearly confirmed in official ma
 - One of Sam’s new friends and part of the core trio.
 - Official store copy describes him as a **self-proclaimed rockstar**.
 - Already enlisted by Kale before Sam is recruited.
+
+## Ms. Wallace
+
+- Official Steam store copy names her as Agefield High’s **guidance counselor**.
+- No official materials currently describe her story role, missions, or relationship to Sam beyond that title.
 
 ## What we still don’t know
 

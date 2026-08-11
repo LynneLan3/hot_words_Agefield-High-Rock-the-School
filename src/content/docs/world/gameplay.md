@@ -78,7 +78,7 @@ head:
       }
 ---
 
-This page summarizes officially confirmed gameplay systems for **Agefield High: Rock the School**. It is a pre-release reference based on the Steam store page, official trailers, and publisher materials — not post-launch playtesting.
+This page summarizes officially confirmed gameplay systems for **Agefield High: Rock the School**. **Agefield High: Rock the School is a single-player game.** It is a pre-release reference based on the Steam store page, official trailers, and publisher materials — not post-launch playtesting.
 
 ## Open-world structure
 
@@ -86,7 +86,7 @@ Agefield High is a small, handcrafted open world: school campus, two neighborhoo
 
 ## Time & school system
 
-On weekdays, classes run until the afternoon. You can attend or skip class. Official lesson types are English, Math, Geography, German, and Music. Good grades earn pocket money. Class answers and a full timetable are not verified. See the [Agefield High Classes & School System](/agefield-high-rock-the-school/classes/) guide.
+On weekdays, classes run until the afternoon. You can attend or skip class. Official lesson types are English, Math, Geography, German, and Music. Publisher materials describe these classes as interactive mini-games. Good grades earn pocket money. Class answers and a full timetable are not verified. See the [Agefield High Classes & School System](/agefield-high-rock-the-school/classes/) guide.
 
 ## Main missions and endings
 
@@ -99,7 +99,7 @@ The campaign centers on the “Rock the School” plan with friends Kale and Axe
 
 ## Side activities
 
-Official materials mention roughly **15 side missions / activities**, including lawn mowing, food delivery jobs, and prank calling as ways to earn cash. Confirmed money paths and what is still unverified are on [How to Make Money in Agefield High](/agefield-high-rock-the-school/how-to-make-money/).
+Official materials mention roughly **15 side missions / activities**, including lawn mowing, food delivery jobs, and prank calling as ways to earn cash. The official Steam announcement also says the game includes collectibles and secrets to discover; counts and locations are not verified. Confirmed money paths and what is still unverified are on [How to Make Money in Agefield High](/agefield-high-rock-the-school/how-to-make-money/).
 
 ## Combat
 
@@ -116,6 +116,8 @@ Players can spend earned money at shops. Official lists include:
 - Accessories
 - Other shop items (Steam also mentions dirty magazines)
 
+Official Steam copy lists several bicycle types players can buy or use, including BMX bikes, country bikes, and racing bikes. Specific prices, stats, unlocks, and routes are not verified.
+
 ## What this page does not cover yet
 
 - Best early-game strategies
@@ -123,5 +125,6 @@ Players can spend earned money at shops. Official lists include:
 - Fastest money methods
 - Mission walkthroughs
 - Ending spoilers beyond the confirmed existence of two endings
+- Collectible lists, locations, or completion requirements
 
 Those topics need verified post-release information. For character roles, see [Agefield High Characters](/agefield-high-rock-the-school/characters/). For launch timing, see [Agefield High Release Date & Platforms](/agefield-high-rock-the-school/release-date/).
