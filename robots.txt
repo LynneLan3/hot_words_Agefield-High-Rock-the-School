@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://agefield-high-rock-the-school.vercel.app/sitemap.xml

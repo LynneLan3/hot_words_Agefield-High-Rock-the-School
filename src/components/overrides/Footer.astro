@@ -1,0 +1,12 @@
+---
+import Default from '@astrojs/starlight/components/Footer.astro';
+import RelatedGuides from '../RelatedGuides.astro';
+
+const isSplash = Astro.locals.starlightRoute.entry.data.template === 'splash';
+---
+
+{!isSplash && <RelatedGuides />}
+
+<Default>
+	<slot />
+</Default>

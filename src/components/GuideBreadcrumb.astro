@@ -1,0 +1,16 @@
+---
+import { game } from '../config/game';
+import { categoryOf, getHubHref } from '../lib/guides';
+
+const entry = Astro.locals.starlightRoute.entry;
+const category = categoryOf(entry);
+const hubHref = await getHubHref();
+---
+
+<nav class="gw-crumb" aria-label="Breadcrumb">
+	<ol>
+		<li><a href={hubHref}>{game.name}</a></li>
+		{category && <li><span>{category.label}</span></li>}
+		<li><span aria-current="page">{entry.data.title}</span></li>
+	</ol>
+</nav>

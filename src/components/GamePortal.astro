@@ -1,0 +1,134 @@
+---
+import { Image } from 'astro:assets';
+import type { ComponentProps } from 'astro/types';
+import { Icon } from '@astrojs/starlight/components';
+import { game } from '../config/game';
+import { resolveGameAsset } from '../lib/assets';
+import { categoryIdOf, getGuides, guideHref, sortGuides } from '../lib/guides';
+import GuideGrid from './GuideGrid.astro';
+
+const guides = await getGuides();
+const heroImage = resolveGameAsset(game.heroImage);
+const categories = [...game.categories].sort((a, b) => a.order - b.order);
+
+const featured = guides.filter((entry) => entry.data.featured).sort(sortGuides).slice(0, 3);
+
+const sections = categories
+	.map((category) => ({
+		category,
+		entries: guides.filter((entry) => categoryIdOf(entry) === category.id).sort(sortGuides),
+	}))
+	.filter((section) => section.entries.length > 0);
+
+const startHere = sections[0]?.entries[0];
+const startHereHref = startHere ? guideHref(startHere) : undefined;
+
+const recentlyUpdated = guides
+	.filter((entry) => entry.data.lastUpdated instanceof Date)
+	.sort((a, b) => {
+		const dateA = a.data.lastUpdated as Date;
+		const dateB = b.data.lastUpdated as Date;
+		return dateB.getTime() - dateA.getTime();
+	})
+	.slice(0, 3);
+
+type StarlightIconName = ComponentProps<typeof Icon>['name'];
+---
+
+<div class="gw-portal">
+	<section class="gw-hero">
+		{
+			heroImage && (
+				<div class="gw-hero__visual">
+					<Image src={heroImage} alt="" width={960} height={540} />
+				</div>
+			)
+		}
+		<div class="gw-hero__copy">
+			<p class="gw-hero__kicker">Guide & Wiki</p>
+			<h1 id="_top">{game.hubTitle ?? `${game.name} Guide & Wiki`}</h1>
+			<p class="gw-hero__tagline">{game.tagline}</p>
+			<dl class="gw-facts">
+				<div>
+					<dt>Release Date</dt>
+					<dd>{game.releaseDate}</dd>
+				</div>
+				<div>
+					<dt>Platforms</dt>
+					<dd>{game.platforms.join(' · ')}</dd>
+				</div>
+				<div>
+					<dt>Developer</dt>
+					<dd>{game.developer}</dd>
+				</div>
+			</dl>
+			{
+				startHereHref && (
+					<a class="gw-hero__cta" href={startHereHref}>
+						Start Here
+					</a>
+				)
+			}
+		</div>
+	</section>
+
+	{
+		featured.length > 0 && (
+			<section class="gw-section">
+				<h2>Featured Guides</h2>
+				<GuideGrid entries={featured} featured />
+			</section>
+		)
+	}
+
+	{
+		sections.length > 0 && (
+			<section class="gw-section">
+				<h2>Explore Guides</h2>
+				{sections.map(({ category, entries }) => (
+					<div class="gw-category">
+						<div class="gw-category__heading">
+							<Icon name={category.icon as StarlightIconName} size="1.15rem" />
+							<div>
+								<h3>{category.label}</h3>
+								<p>{category.description}</p>
+							</div>
+						</div>
+						<GuideGrid {entries} />
+					</div>
+				))}
+			</section>
+		)
+	}
+
+	{
+		recentlyUpdated.length > 0 && (
+			<section class="gw-section">
+				<h2>Recently Updated</h2>
+				<GuideGrid entries={recentlyUpdated} />
+			</section>
+		)
+	}
+
+	<section class="gw-section gw-info">
+		<h2>Game Info</h2>
+		<dl class="gw-facts gw-facts--panel">
+			<div>
+				<dt>Release</dt>
+				<dd>{game.releaseDate}</dd>
+			</div>
+			<div>
+				<dt>Developer</dt>
+				<dd>{game.developer}</dd>
+			</div>
+			<div>
+				<dt>Publisher</dt>
+				<dd>{game.publisher}</dd>
+			</div>
+			<div>
+				<dt>Platforms</dt>
+				<dd>{game.platforms.join(' · ')}</dd>
+			</div>
+		</dl>
+	</section>
+</div>

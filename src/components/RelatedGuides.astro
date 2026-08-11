@@ -1,0 +1,28 @@
+---
+import { getGuides, guideHref, resolveRelated } from '../lib/guides';
+
+const entry = Astro.locals.starlightRoute.entry;
+const slugs = entry.data.related ?? [];
+const related =
+	slugs.length > 0 ? resolveRelated(await getGuides(), slugs, entry.id) : [];
+---
+
+{
+	related.length > 0 && (
+		<section class="gw-related" aria-labelledby="gw-related-heading">
+			<h2 id="gw-related-heading">Related Guides</h2>
+			<ul>
+				{related.map((guide) => (
+					<li>
+						<a href={guideHref(guide)}>
+							<span class="gw-related__title">{guide.data.title}</span>
+							{guide.data.description && (
+								<span class="gw-related__desc">{guide.data.description}</span>
+							)}
+						</a>
+					</li>
+				))}
+			</ul>
+		</section>
+	)
+}

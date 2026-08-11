@@ -5,6 +5,11 @@
       "source": "/",
       "destination": "/agefield-high-rock-the-school/",
       "permanent": true
+    },
+    {
+      "source": "/sitemap.xml",
+      "destination": "/sitemap-index.xml",
+      "permanent": true
     }
   ]
 }

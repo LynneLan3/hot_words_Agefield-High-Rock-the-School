@@ -1,0 +1,33 @@
+---
+import { Image } from 'astro:assets';
+import GuideStatus from './GuideStatus.astro';
+import { categoryOf, guideHref, type GuideEntry } from '../lib/guides';
+
+interface Props {
+	entry: GuideEntry;
+	featured?: boolean;
+}
+
+const { entry, featured = false } = Astro.props;
+const href = guideHref(entry);
+const category = categoryOf(entry);
+const cover = entry.data.cover;
+---
+
+<a class:list={['gw-card', featured && 'gw-card--featured']} href={href}>
+	{
+		cover && (
+			<span class="gw-card__media">
+				<Image src={cover} alt="" width={640} height={360} />
+			</span>
+		)
+	}
+	<span class="gw-card__body">
+		<span class="gw-card__meta">
+			{category && <span class="gw-card__category">{category.label}</span>}
+			{entry.data.status && <GuideStatus status={entry.data.status} />}
+		</span>
+		<span class="gw-card__title">{entry.data.title}</span>
+		{entry.data.description && <span class="gw-card__desc">{entry.data.description}</span>}
+	</span>
+</a>
