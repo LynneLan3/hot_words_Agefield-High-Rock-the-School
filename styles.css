@@ -151,6 +151,10 @@ table.quick-facts th {
   font-weight: 600;
 }
 
+table.quick-facts thead th {
+  width: auto;
+}
+
 .unconfirmed {
   color: var(--color-muted);
   font-style: italic;
