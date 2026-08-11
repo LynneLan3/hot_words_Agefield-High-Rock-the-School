@@ -1,0 +1,39 @@
+---
+import type { ComponentProps } from 'astro/types';
+import { Icon } from '@astrojs/starlight/components';
+import type { GameCategory } from '../config/game';
+import { guideHref, type GuideEntry } from '../lib/guides';
+
+interface Props {
+	category: GameCategory;
+	entries: GuideEntry[];
+}
+
+const { category, entries } = Astro.props;
+const shown = entries.slice(0, 5);
+const extra = Math.max(0, entries.length - shown.length);
+
+type StarlightIconName = ComponentProps<typeof Icon>['name'];
+---
+
+<article class="gw-cat-card" id={category.id}>
+	<header class="gw-cat-card__heading">
+		<Icon name={category.icon as StarlightIconName} size="1.15rem" />
+		<div>
+			<h3>{category.label}</h3>
+			{category.description && <p>{category.description}</p>}
+		</div>
+	</header>
+	{
+		shown.length > 0 && (
+			<ul class="gw-cat-card__links">
+				{shown.map((entry) => (
+					<li>
+						<a href={guideHref(entry)}>{entry.data.title}</a>
+					</li>
+				))}
+			</ul>
+		)
+	}
+	{extra > 0 && <p class="gw-cat-card__more">+ {extra} more guides</p>}
+</article>

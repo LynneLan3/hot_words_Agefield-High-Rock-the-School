@@ -1,20 +1,26 @@
 ---
+import type { ComponentProps } from 'astro/types';
 import { Image } from 'astro:assets';
+import { Icon } from '@astrojs/starlight/components';
 import GuideStatus from './GuideStatus.astro';
 import { categoryOf, guideHref, type GuideEntry } from '../lib/guides';
 
 interface Props {
 	entry: GuideEntry;
 	featured?: boolean;
+	variant?: 'featured' | 'compact';
 }
 
-const { entry, featured = false } = Astro.props;
+const { entry, featured = false, variant } = Astro.props;
+const density = variant ?? (featured ? 'featured' : 'compact');
 const href = guideHref(entry);
 const category = categoryOf(entry);
 const cover = entry.data.cover;
+
+type StarlightIconName = ComponentProps<typeof Icon>['name'];
 ---
 
-<a class:list={['gw-card', featured && 'gw-card--featured']} href={href}>
+<a class:list={['gw-card', density === 'featured' && 'gw-card--featured']} href={href}>
 	{
 		cover && (
 			<span class="gw-card__media">
@@ -24,7 +30,14 @@ const cover = entry.data.cover;
 	}
 	<span class="gw-card__body">
 		<span class="gw-card__meta">
-			{category && <span class="gw-card__category">{category.label}</span>}
+			{
+				!cover && category && density === 'featured' && (
+					<span class="gw-card__icon" aria-hidden="true">
+						<Icon name={category.icon as StarlightIconName} size="1rem" />
+					</span>
+				)
+			}
+			{category && density !== 'featured' && <span class="gw-card__category">{category.label}</span>}
 			{entry.data.status && <GuideStatus status={entry.data.status} />}
 		</span>
 		<span class="gw-card__title">{entry.data.title}</span>

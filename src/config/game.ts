@@ -6,6 +6,20 @@ export interface GameCategory {
 	order: number;
 }
 
+export interface GamePortalQuestion {
+	label: string;
+	href: string;
+}
+
+export interface GamePortalConfig {
+	/** Compact question chips on the Hub. Each href should point at a real guide. */
+	popularQuestions?: readonly GamePortalQuestion[];
+	/** Recently Updated list. Defaults to true when omitted. */
+	showRecentlyUpdated?: boolean;
+	/** Max items in Recently Updated. Defaults to 3. */
+	maxRecent?: number;
+}
+
 export interface GameConfig {
 	name: string;
 	shortName: string;
@@ -24,6 +38,8 @@ export interface GameConfig {
 	heroImage?: string;
 	logoImage?: string;
 	categories: readonly GameCategory[];
+	/** Optional Hub portal presentation. GamePortal reads this; do not fork the component per game. */
+	portal?: GamePortalConfig;
 }
 
 /**
@@ -49,6 +65,36 @@ export const game: GameConfig = {
 	publisher: 'Refugium Games (PC) / Perp Games (console versions)',
 	platforms: ['PC (Steam)', 'PlayStation 5', 'Xbox Series X|S'],
 	accentColor: '#a4262c',
+	portal: {
+		popularQuestions: [
+			{
+				label: 'What classes are in Agefield High?',
+				href: '/agefield-high-rock-the-school/classes/',
+			},
+			{
+				label: 'Can you skip class in Agefield High?',
+				href: '/agefield-high-rock-the-school/classes/',
+			},
+			{
+				label: 'How do you make money in Agefield High?',
+				href: '/agefield-high-rock-the-school/how-to-make-money/',
+			},
+			{
+				label: 'Is there a map in Agefield High?',
+				href: '/agefield-high-rock-the-school/map-locations/',
+			},
+			{
+				label: 'Does Agefield High support controllers?',
+				href: '/agefield-high-rock-the-school/system-requirements/',
+			},
+			{
+				label: 'When does Agefield High release?',
+				href: '/agefield-high-rock-the-school/release-date/',
+			},
+		],
+		showRecentlyUpdated: true,
+		maxRecent: 3,
+	},
 	categories: [
 		{
 			id: 'school-life',

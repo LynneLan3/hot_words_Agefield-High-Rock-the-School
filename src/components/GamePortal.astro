@@ -1,17 +1,16 @@
 ---
 import { Image } from 'astro:assets';
-import type { ComponentProps } from 'astro/types';
-import { Icon } from '@astrojs/starlight/components';
 import { game } from '../config/game';
 import { resolveGameAsset } from '../lib/assets';
-import { categoryIdOf, getGuides, guideHref, sortGuides } from '../lib/guides';
+import { categoryIdOf, categoryOf, getGuides, guideHref, sortGuides } from '../lib/guides';
+import CategorySummaryCard from './CategorySummaryCard.astro';
 import GuideGrid from './GuideGrid.astro';
 
 const guides = await getGuides();
 const heroImage = resolveGameAsset(game.heroImage);
 const categories = [...game.categories].sort((a, b) => a.order - b.order);
 
-const featured = guides.filter((entry) => entry.data.featured).sort(sortGuides).slice(0, 3);
+const featured = guides.filter((entry) => entry.data.featured).sort(sortGuides).slice(0, 4);
 
 const sections = categories
 	.map((category) => ({
@@ -20,23 +19,24 @@ const sections = categories
 	}))
 	.filter((section) => section.entries.length > 0);
 
-const startHere = sections[0]?.entries[0];
-const startHereHref = startHere ? guideHref(startHere) : undefined;
+const popularQuestions = game.portal?.popularQuestions ?? [];
+const showRecentlyUpdated = game.portal?.showRecentlyUpdated !== false;
+const maxRecent = game.portal?.maxRecent ?? 3;
 
-const recentlyUpdated = guides
-	.filter((entry) => entry.data.lastUpdated instanceof Date)
-	.sort((a, b) => {
-		const dateA = a.data.lastUpdated as Date;
-		const dateB = b.data.lastUpdated as Date;
-		return dateB.getTime() - dateA.getTime();
-	})
-	.slice(0, 3);
-
-type StarlightIconName = ComponentProps<typeof Icon>['name'];
+const recentlyUpdated = showRecentlyUpdated
+	? guides
+			.filter((entry) => entry.data.lastUpdated instanceof Date)
+			.sort((a, b) => {
+				const dateA = a.data.lastUpdated as Date;
+				const dateB = b.data.lastUpdated as Date;
+				return dateB.getTime() - dateA.getTime();
+			})
+			.slice(0, maxRecent)
+	: [];
 ---
 
 <div class="gw-portal">
-	<section class="gw-hero">
+	<section class:list={['gw-hero', heroImage && 'gw-hero--media']}>
 		{
 			heroImage && (
 				<div class="gw-hero__visual">
@@ -48,35 +48,38 @@ type StarlightIconName = ComponentProps<typeof Icon>['name'];
 			<p class="gw-hero__kicker">Guide & Wiki</p>
 			<h1 id="_top">{game.hubTitle ?? `${game.name} Guide & Wiki`}</h1>
 			<p class="gw-hero__tagline">{game.tagline}</p>
-			<dl class="gw-facts">
-				<div>
-					<dt>Release Date</dt>
-					<dd>{game.releaseDate}</dd>
-				</div>
-				<div>
-					<dt>Platforms</dt>
-					<dd>{game.platforms.join(' · ')}</dd>
-				</div>
-				<div>
-					<dt>Developer</dt>
-					<dd>{game.developer}</dd>
-				</div>
-			</dl>
-			{
-				startHereHref && (
-					<a class="gw-hero__cta" href={startHereHref}>
-						Start Here
-					</a>
-				)
-			}
+			<p class="gw-hero__meta">
+				{game.releaseDate}
+				{' · '}
+				{game.platforms.join(' · ')}
+				{' · '}
+				{game.developer}
+			</p>
 		</div>
 	</section>
 
 	{
 		featured.length > 0 && (
 			<section class="gw-section">
-				<h2>Featured Guides</h2>
+				<h2>Start Here</h2>
 				<GuideGrid entries={featured} featured />
+			</section>
+		)
+	}
+
+	{
+		popularQuestions.length > 0 && (
+			<section class="gw-section">
+				<h2>Popular Questions</h2>
+				<ul class="gw-questions">
+					{popularQuestions.map((question) => (
+						<li>
+							<a class="gw-chip" href={question.href}>
+								{question.label}
+							</a>
+						</li>
+					))}
+				</ul>
 			</section>
 		)
 	}
@@ -84,19 +87,12 @@ type StarlightIconName = ComponentProps<typeof Icon>['name'];
 	{
 		sections.length > 0 && (
 			<section class="gw-section">
-				<h2>Explore Guides</h2>
-				{sections.map(({ category, entries }) => (
-					<div class="gw-category">
-						<div class="gw-category__heading">
-							<Icon name={category.icon as StarlightIconName} size="1.15rem" />
-							<div>
-								<h3>{category.label}</h3>
-								<p>{category.description}</p>
-							</div>
-						</div>
-						<GuideGrid {entries} />
-					</div>
-				))}
+				<h2>Browse Guides</h2>
+				<div class="gw-browse">
+					{sections.map(({ category, entries }) => (
+						<CategorySummaryCard {category} {entries} />
+					))}
+				</div>
 			</section>
 		)
 	}
@@ -105,14 +101,32 @@ type StarlightIconName = ComponentProps<typeof Icon>['name'];
 		recentlyUpdated.length > 0 && (
 			<section class="gw-section">
 				<h2>Recently Updated</h2>
-				<GuideGrid entries={recentlyUpdated} />
+				<ul class="gw-recent">
+					{recentlyUpdated.map((entry) => {
+						const category = categoryOf(entry);
+						const updated = entry.data.lastUpdated as Date;
+						return (
+							<li>
+								<a href={guideHref(entry)}>
+									<span class="gw-recent__title">{entry.data.title}</span>
+									<span class="gw-recent__meta">
+										{category?.label}
+										{category && ' · '}
+										<time datetime={updated.toISOString()}>{updated.toISOString().slice(0, 10)}</time>
+									</span>
+								</a>
+							</li>
+						);
+					})}
+				</ul>
 			</section>
 		)
 	}
 
-	<section class="gw-section gw-info">
-		<h2>Game Info</h2>
-		<dl class="gw-facts gw-facts--panel">
+	<section class="gw-section gw-about">
+		<h2>About {game.name}</h2>
+		<p class="gw-about__desc">{game.description}</p>
+		<dl class="gw-facts">
 			<div>
 				<dt>Release</dt>
 				<dd>{game.releaseDate}</dd>
