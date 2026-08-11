@@ -1,8 +1,15 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
+import sitemap from '@astrojs/sitemap';
 import { game } from './src/config/game.ts';
 import { sidebarFromCategories } from './src/config/sidebar.ts';
+
+function isCategoryLandingUrl(page) {
+	const path = new URL(page).pathname.replace(/\/+$/, '') || '/';
+	const hub = game.hubPath.replace(/\/+$/, '') || '/';
+	return game.categories.some((category) => path === `${hub}/${category.id}`);
+}
 
 // https://astro.build/config
 export default defineConfig({
@@ -34,6 +41,9 @@ export default defineConfig({
 				SiteTitle: './src/components/overrides/SiteTitle.astro',
 				Header: './src/components/overrides/Header.astro',
 			},
+		}),
+		sitemap({
+			filter: (page) => !isCategoryLandingUrl(page),
 		}),
 	],
 });

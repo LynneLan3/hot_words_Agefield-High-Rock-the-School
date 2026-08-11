@@ -2,7 +2,7 @@
 import type { ComponentProps } from 'astro/types';
 import { Icon } from '@astrojs/starlight/components';
 import type { GameCategory } from '../config/game';
-import { guideHref, type GuideEntry } from '../lib/guides';
+import { categoryHref, guideHref, type GuideEntry } from '../lib/guides';
 
 interface Props {
 	category: GameCategory;
@@ -12,6 +12,7 @@ interface Props {
 const { category, entries } = Astro.props;
 const shown = entries.slice(0, 5);
 const extra = Math.max(0, entries.length - shown.length);
+const href = categoryHref(category.id);
 
 type StarlightIconName = ComponentProps<typeof Icon>['name'];
 ---
@@ -20,7 +21,9 @@ type StarlightIconName = ComponentProps<typeof Icon>['name'];
 	<header class="gw-cat-card__heading">
 		<Icon name={category.icon as StarlightIconName} size="1.15rem" />
 		<div>
-			<h3>{category.label}</h3>
+			<h3>
+				<a class="gw-cat-card__title-link" href={href}>{category.label}</a>
+			</h3>
 			{category.description && <p>{category.description}</p>}
 		</div>
 	</header>
@@ -36,4 +39,5 @@ type StarlightIconName = ComponentProps<typeof Icon>['name'];
 		)
 	}
 	{extra > 0 && <p class="gw-cat-card__more">+ {extra} more guides</p>}
+	<a class="gw-cat-card__cta" href={href}>View {category.label} guides →</a>
 </article>

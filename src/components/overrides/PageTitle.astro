@@ -3,14 +3,17 @@ import Default from '@astrojs/starlight/components/PageTitle.astro';
 import GuideBreadcrumb from '../GuideBreadcrumb.astro';
 import GuideStatus from '../GuideStatus.astro';
 import QuickAnswer from '../QuickAnswer.astro';
+import { isCategoryLandingPath } from '../../lib/guides';
 
 const { entry } = Astro.locals.starlightRoute;
 const isSplash = entry.data.template === 'splash';
+const isCategoryLanding = isCategoryLandingPath(Astro.url.pathname);
+const isArticle = !isSplash && !isCategoryLanding;
 const lastUpdated = entry.data.lastUpdated instanceof Date ? entry.data.lastUpdated : undefined;
 ---
 
 {
-	!isSplash && (
+	isArticle && (
 		<>
 			<GuideBreadcrumb />
 			<div class="gw-article-meta">
@@ -31,4 +34,4 @@ const lastUpdated = entry.data.lastUpdated instanceof Date ? entry.data.lastUpda
 	</Default>
 )}
 
-{!isSplash && entry.data.quickAnswer && <QuickAnswer text={entry.data.quickAnswer} />}
+{isArticle && entry.data.quickAnswer && <QuickAnswer text={entry.data.quickAnswer} />}

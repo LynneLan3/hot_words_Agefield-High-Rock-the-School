@@ -18,6 +18,8 @@ export interface GamePortalConfig {
 	showRecentlyUpdated?: boolean;
 	/** Max items in Recently Updated. Defaults to 3. */
 	maxRecent?: number;
+	/** Compact About / Game Info on the Hub. Defaults to true when omitted. */
+	showAbout?: boolean;
 }
 
 export interface GameConfig {
@@ -94,6 +96,7 @@ export const game: GameConfig = {
 		],
 		showRecentlyUpdated: true,
 		maxRecent: 3,
+		showAbout: false,
 	},
 	categories: [
 		{
