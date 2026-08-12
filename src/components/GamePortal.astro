@@ -8,6 +8,7 @@ import GuideGrid from './GuideGrid.astro';
 
 const guides = await getGuides();
 const heroImage = resolveGameAsset(game.heroImage);
+const heroPosition = game.heroPosition ?? 'center';
 const categories = [...game.categories].sort((a, b) => a.order - b.order);
 
 const featured = guides.filter((entry) => entry.data.featured).sort(sortGuides).slice(0, 4);
@@ -41,7 +42,17 @@ const recentlyUpdated = showRecentlyUpdated
 		{
 			heroImage && (
 				<div class="gw-hero__visual">
-					<Image src={heroImage} alt="" width={960} height={540} />
+					<Image
+						src={heroImage}
+						alt={game.heroAlt ?? game.name}
+						width={1920}
+						height={620}
+						widths={[800, 1280, 1920]}
+						sizes="(min-width: 50em) 48rem, 100vw"
+						loading="eager"
+						fetchpriority="high"
+						style={{ objectPosition: heroPosition }}
+					/>
 				</div>
 			)
 		}

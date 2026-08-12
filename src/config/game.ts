@@ -38,6 +38,8 @@ export interface GameConfig {
 	platforms: readonly string[];
 	accentColor: string;
 	heroImage?: string;
+	heroAlt?: string;
+	heroPosition?: string;
 	logoImage?: string;
 	categories: readonly GameCategory[];
 	/** Optional Hub portal presentation. GamePortal reads this; do not fork the component per game. */
@@ -67,6 +69,9 @@ export const game: GameConfig = {
 	publisher: 'Refugium Games (PC) / Perp Games (console versions)',
 	platforms: ['PC (Steam)', 'PlayStation 5', 'Xbox Series X|S'],
 	accentColor: '#a4262c',
+	heroImage: 'hero.jpg',
+	heroAlt: 'Official Steam artwork for Agefield High: Rock the School',
+	heroPosition: 'center',
 	portal: {
 		popularQuestions: [
 			{
