@@ -71,15 +71,6 @@ const recentlyUpdated = showRecentlyUpdated
 	</section>
 
 	{
-		featured.length > 0 && (
-			<section class="gw-section">
-				<h2>Start Here</h2>
-				<GuideGrid entries={featured} featured />
-			</section>
-		)
-	}
-
-	{
 		popularQuestions.length > 0 && (
 			<section class="gw-section">
 				<h2>Popular Questions</h2>
@@ -92,6 +83,15 @@ const recentlyUpdated = showRecentlyUpdated
 						</li>
 					))}
 				</ul>
+			</section>
+		)
+	}
+
+	{
+		featured.length > 0 && (
+			<section class="gw-section">
+				<h2>Start Here</h2>
+				<GuideGrid entries={featured} featured />
 			</section>
 		)
 	}
