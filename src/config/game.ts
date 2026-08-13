@@ -59,12 +59,12 @@ export const game: GameConfig = {
 	description:
 		'Agefield High: Rock the School player guide hub covering classes, how to make money, map locations, gameplay, characters, release date and PC system requirements.',
 	tagline:
-		'An open-world, coming-of-age teen comedy adventure from Refugium Games. The PC version launches on Steam on August 12, 2026.',
+		'An open-world, coming-of-age teen comedy adventure from Refugium Games. Now available on PC via Steam, released August 12, 2026.',
 	siteUrl: 'https://agefield-high-rock-the-school.vercel.app',
 	hubPath: '/agefield-high-rock-the-school/',
 	hubTitle:
 		'Agefield High: Rock the School Guide — Classes, Money, Map & Gameplay',
-	releaseDate: 'August 12, 2026 (PC)',
+	releaseDate: 'Released August 12, 2026 (PC / Steam)',
 	developer: 'Refugium Games',
 	publisher: 'Refugium Games (PC) / Perp Games (console versions)',
 	platforms: ['PC (Steam)', 'PlayStation 5', 'Xbox Series X|S'],
@@ -95,7 +95,7 @@ export const game: GameConfig = {
 				href: '/agefield-high-rock-the-school/system-requirements/',
 			},
 			{
-				label: 'When does Agefield High release?',
+				label: 'When did Agefield High release on PC?',
 				href: '/agefield-high-rock-the-school/release-date/',
 			},
 		],

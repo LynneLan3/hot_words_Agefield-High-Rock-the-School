@@ -11,14 +11,14 @@ sidebar:
   label: PC System Requirements
   order: 7
   badge: Confirmed
-lastUpdated: 2026-08-11
+lastUpdated: 2026-08-13
 head:
   - tag: title
-    content: "Agefield High System Requirements: PC Specs & Storage | LaunchWire"
+    content: "Agefield High System Requirements: PC Specs & Storage"
   - tag: meta
     attrs:
       property: og:title
-      content: "Agefield High System Requirements: PC Specs & Storage | LaunchWire"
+      content: "Agefield High System Requirements: PC Specs & Storage"
   - tag: script
     attrs:
       type: application/ld+json
@@ -93,7 +93,7 @@ head:
       }
 ---
 
-These are the official PC system requirements currently published on the Steam store page for **Agefield High: Rock the School**. Specs can change before or after launch, so treat this as a pre-release reference.
+These are the official PC system requirements currently published on the Steam store page for **Agefield High: Rock the School**. Specs can still change after patches, so confirm against the live Steam listing if you are buying or upgrading hardware.
 
 Source: official Steam store page.
 
@@ -122,7 +122,7 @@ Source: official Steam store page.
 | Additional Notes | SSD Required |
 
 :::note
-Figures above match the live Steam listing as of August 11, 2026. Older third-party pages that list different GPU or storage numbers should not be trusted over Steam.
+Figures above match the live Steam listing as of August 13, 2026. Older third-party pages that list different GPU or storage numbers should not be trusted over Steam.
 :::
 
 ## Controller Support & Keybinds

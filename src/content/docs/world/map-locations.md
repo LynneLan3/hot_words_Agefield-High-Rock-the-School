@@ -1,6 +1,6 @@
 ---
 title: "Agefield High Map & Locations Guide"
-description: "Explore the confirmed areas in Agefield High: the school campus, two neighborhoods, town center and countryside, plus the shops and locations currently known before launch."
+description: "Explore the confirmed areas in Agefield High: the school campus, two neighborhoods, town center and countryside, plus the shops and locations currently known."
 category: world
 slug: agefield-high-rock-the-school/map-locations
 status: confirmed
@@ -13,7 +13,7 @@ sidebar:
   label: "Map & Locations"
   order: 3
   badge: Confirmed
-lastUpdated: 2026-08-11
+lastUpdated: 2026-08-13
 head:
   - tag: title
     content: "Agefield High Map & Locations Guide: School, Town & Countryside"
@@ -126,7 +126,7 @@ Total counts, exact locations, and a collectible map are <span class="unconfirme
 
 ## Is There a Full Interactive Map Yet?
 
-No. This site does not currently host a verified, complete interactive map. A fake map would be worse than no map. After launch, this page can add confirmed landmarks as they are checked.
+No. This site does not currently host a verified, complete interactive map. A fake map would be worse than no map. This page can add confirmed landmarks as they are independently checked.
 
 ## Agefield High Map FAQ
 

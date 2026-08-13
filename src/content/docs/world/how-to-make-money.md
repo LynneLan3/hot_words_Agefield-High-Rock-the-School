@@ -1,11 +1,11 @@
 ---
 title: How to Make Money in Agefield High
-description: Agefield High lets you earn pocket money through good grades and side activities. See the confirmed money-making methods, what cash buys, and what still needs launch-day verification.
+description: Agefield High lets you earn pocket money through good grades and side activities. See the confirmed money-making methods, what cash buys, and what still needs independent verification.
 category: world
 slug: agefield-high-rock-the-school/how-to-make-money
 status: confirmed
 featured: true
-quickAnswer: "Go to class for steady pocket money, or skip class to chase side jobs such as lawn mowing and food delivery. Cash is spent on bikes, clothes, hairstyles, tattoos, and accessories. Which path is faster is still untested."
+quickAnswer: "Go to class for steady pocket money, or skip class to chase side jobs such as lawn mowing and food delivery. Cash is spent on bikes, clothes, hairstyles, tattoos, and accessories. The fastest repeatable money-making method has not yet been independently verified."
 related:
   - agefield-high-rock-the-school/classes
   - agefield-high-rock-the-school/map-locations
@@ -13,7 +13,7 @@ sidebar:
   label: How to Make Money
   order: 2
   badge: Confirmed
-lastUpdated: 2026-08-11
+lastUpdated: 2026-08-13
 head:
   - tag: title
     content: "How to Make Money in Agefield High: Grades, Side Missions & Jobs"
@@ -64,7 +64,7 @@ head:
             "name": "What is the fastest way to make money in Agefield High?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Not verified yet. Exact payouts, time required, and repeatability have not been published."
+              "text": "The fastest repeatable money-making method has not yet been independently verified. Exact payouts, time required, and repeatability have not been confirmed for this guide."
             }
           },
           {
@@ -84,25 +84,25 @@ Official materials currently confirm two money paths in **Agefield High: Rock th
 1. Get good grades at school to earn pocket money.
 2. Complete side missions and activities for cash.
 
-Exact payouts, cooldowns, and a fastest farm method are <span class="unconfirmed">not verified yet</span>.
+Exact payouts for every method, cooldowns, and a fastest farm method are <span class="unconfirmed">not yet fully verified</span>. One observed German perfect class score paid $20 — see the Classes guide.
 
 ## Confirmed Ways to Earn Money
 
 | Method | Confirmed? | What we know |
 | --- | --- | --- |
-| Good grades | Yes | Earn pocket money |
+| Good grades | Yes | Pocket money depends on grades; one verified German perfect score paid $20 |
 | Side missions | Yes | Official copy says skip class and earn cash by doing side missions |
 | Side activities | Yes | About 15 side missions/activities are listed |
 | Lawn mowing | Yes | Confirmed activity; payout unverified |
 | Food delivery | Yes | Listed in the official Steam “Who Should Attend” announcement; payout unverified |
 | Prank calling | Referenced | Official press lists it among side hustles/mini-games that earn cash |
-| Fastest money method | Not yet verified | Needs post-launch testing |
+| Fastest money method | Not yet verified | Has not yet been independently verified |
 
 ## Earn Money by Getting Good Grades
 
-Steam store copy says you can “earn some pocket money by getting good grades.” That is the confirmed school-side income path. Class list and attendance rules are covered in the [Agefield High Classes & School System](/agefield-high-rock-the-school/classes/) guide.
+Steam store copy and the in-game tutorial both link pocket money to grades. That is the confirmed school-side income path. Class list, mini-game mechanics, and verified answer pools are covered in the [Agefield High Classes & School System](/agefield-high-rock-the-school/classes/) guide.
 
-How much each grade pays, and whether every subject pays the same, is <span class="unconfirmed">not officially published</span>.
+One verified German perfect-score class run awarded **$20**. A full payout table for every grade in every subject is <span class="unconfirmed">still incomplete</span>.
 
 ## Earn Money Through Side Missions and Activities
 
@@ -130,9 +130,9 @@ Steam also mentions other shop items. Specific prices are <span class="unconfirm
 
 ## What Is the Fastest Way to Make Money?
 
-**Not verified yet.**
+**The fastest repeatable money-making method has not yet been independently verified.**
 
-There is not enough reliable post-launch data to compare:
+There is not enough reliable data yet to compare:
 
 - Exact payout
 - Time required
@@ -140,7 +140,7 @@ There is not enough reliable post-launch data to compare:
 - Cooldown
 - Fastest farming efficiency
 
-This section is the place to update after the August 12, 2026 PC launch, once those numbers can be checked in-game.
+This section will be updated when those numbers can be checked reliably in-game.
 
 ## Agefield High Money FAQ
 
@@ -158,4 +158,4 @@ Yes. The official Steam announcement lists food delivery jobs. Exact payout is <
 
 ### What is the fastest money method?
 
-Not verified yet.
+The fastest repeatable money-making method has <span class="unconfirmed">not yet been independently verified</span>.

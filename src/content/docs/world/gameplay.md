@@ -3,7 +3,7 @@ title: "Agefield High: Rock the School Gameplay"
 description: "Official Agefield High: Rock the School gameplay overview — school classes, open world, missions, combat, bikes, shopping, and side activities."
 category: world
 slug: agefield-high-rock-the-school/gameplay
-status: pre-release
+status: confirmed
 featured: false
 related:
   - agefield-high-rock-the-school/classes
@@ -11,15 +11,15 @@ related:
 sidebar:
   label: Gameplay
   order: 4
-  badge: Pre-release
-lastUpdated: 2026-08-11
+  badge: Confirmed
+lastUpdated: 2026-08-13
 head:
   - tag: title
-    content: "Agefield High Gameplay: Classes, Open World & Activities | LaunchWire"
+    content: "Agefield High Gameplay: Classes, Open World & Activities"
   - tag: meta
     attrs:
       property: og:title
-      content: "Agefield High Gameplay: Classes, Open World & Activities | LaunchWire"
+      content: "Agefield High Gameplay: Classes, Open World & Activities"
   - tag: script
     attrs:
       type: application/ld+json
@@ -78,7 +78,7 @@ head:
       }
 ---
 
-This page summarizes officially confirmed gameplay systems for **Agefield High: Rock the School**. **Agefield High: Rock the School is a single-player game.** It is a pre-release reference based on the Steam store page, official trailers, and publisher materials — not post-launch playtesting.
+This page summarizes officially confirmed gameplay systems for **Agefield High: Rock the School**. **Agefield High: Rock the School is a single-player game.** Agefield High: Rock the School released on PC via Steam on August 12, 2026. Details below are based on the Steam store page, official trailers, and publisher materials. Hands-on playtesting details that are not yet independently verified are marked as such.
 
 ## Open-world structure
 
@@ -86,7 +86,7 @@ Agefield High is a small, handcrafted open world: school campus, two neighborhoo
 
 ## Time & school system
 
-On weekdays, classes run until the afternoon. You can attend or skip class. Official lesson types are English, Math, Geography, German, and Music. Publisher materials describe these classes as interactive mini-games. Good grades earn pocket money. Class answers and a full timetable are not verified. See the [Agefield High Classes & School System](/agefield-high-rock-the-school/classes/) guide.
+On weekdays, classes run until the afternoon. You can attend or skip class. The five lesson types — English, Math, Geography, German, and Music — each use a verified mini-game (spelling, arithmetic, map quiz, translation, or guitar rhythm). The tutorial links grades to pocket money. Partial verified answer pools and schedule notes are on the [Agefield High Classes & School System](/agefield-high-rock-the-school/classes/) guide; a full weekly timetable is still being verified.
 
 ## Main missions and endings
 
@@ -116,7 +116,7 @@ Players can spend earned money at shops. Official lists include:
 - Accessories
 - Other shop items (Steam also mentions dirty magazines)
 
-Official Steam copy lists several bicycle types players can buy or use, including BMX bikes, country bikes, and racing bikes. Specific prices, stats, unlocks, and routes are not verified.
+Official Steam copy lists several bicycle types players can buy or use, including BMX bikes, country bikes, and racing bikes. Specific prices, stats, unlocks, and routes are <span class="unconfirmed">not yet independently verified</span>.
 
 ## What this page does not cover yet
 
@@ -127,4 +127,4 @@ Official Steam copy lists several bicycle types players can buy or use, includin
 - Ending spoilers beyond the confirmed existence of two endings
 - Collectible lists, locations, or completion requirements
 
-Those topics need verified post-release information. For character roles, see [Agefield High Characters](/agefield-high-rock-the-school/characters/). For launch timing, see [Agefield High Release Date & Platforms](/agefield-high-rock-the-school/release-date/).
+Those topics still need independently verified gameplay information. For character roles, see [Agefield High Characters](/agefield-high-rock-the-school/characters/). For PC release status, see [Agefield High Release Date & Platforms](/agefield-high-rock-the-school/release-date/).

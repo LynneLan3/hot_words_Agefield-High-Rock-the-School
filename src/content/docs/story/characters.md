@@ -3,22 +3,22 @@ title: "Agefield High: Rock the School Characters"
 description: "Confirmed Agefield High: Rock the School characters so far — Sam, Kale, Axel, and guidance counselor Ms. Wallace — based only on official store and press information."
 category: story
 slug: agefield-high-rock-the-school/characters
-status: pre-release
+status: confirmed
 featured: false
 related:
   - agefield-high-rock-the-school/gameplay
 sidebar:
   label: Characters
   order: 5
-  badge: Pre-release
-lastUpdated: 2026-08-11
+  badge: Confirmed
+lastUpdated: 2026-08-13
 head:
   - tag: title
-    content: "Agefield High Characters: Sam, Kale, Axel & More | LaunchWire"
+    content: "Agefield High Characters: Sam, Kale, Axel & More"
   - tag: meta
     attrs:
       property: og:title
-      content: "Agefield High Characters: Sam, Kale, Axel & More | LaunchWire"
+      content: "Agefield High Characters: Sam, Kale, Axel & More"
   - tag: script
     attrs:
       type: application/ld+json
@@ -72,13 +72,13 @@ This page lists only character details that are clearly confirmed in official ma
 
 ## What we still don’t know
 
-As of August 9, 2026 — before the PC launch — official materials have not published a full character roster with verified ages, romance outcomes, skill trees, or detailed backstories beyond the core setup above.
+As of August 13, 2026, official materials have not published a full character roster with verified ages, romance outcomes, skill trees, or detailed backstories beyond the core setup above.
 
 - Exact ages for Sam, Kale, and Axel — <span class="unconfirmed">not officially confirmed</span>
 - Full supporting cast bios — <span class="unconfirmed">not officially confirmed</span>
 - Romance / relationship endings by character — <span class="unconfirmed">not officially confirmed</span>
 - Hidden character abilities or affinity systems — <span class="unconfirmed">not officially confirmed</span>
 
-As the game launches and official information expands, this page will be updated with additional verified characters and details.
+This page will be updated with additional verified characters and details as reliable information is confirmed.
 
 For how these characters fit into school life and missions, see [Agefield High gameplay](/agefield-high-rock-the-school/gameplay/).
