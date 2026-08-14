@@ -1,25 +1,27 @@
 ---
 title: "Agefield High: Rock the School Gameplay"
-description: "Official Agefield High: Rock the School gameplay overview — school classes, open world, missions, combat, bikes, shopping, and side activities."
+description: "Agefield High gameplay after launch: the school-day loop, attend vs skip class, grades and pocket money, after-school missions, side jobs, bikes, shopping, and basic combat."
 category: world
 slug: agefield-high-rock-the-school/gameplay
 status: confirmed
 featured: false
+quickAnswer: "A weekday in Agefield High is school first, then free time. Attend class for grades and pocket money, or skip class to explore and take jobs — with teachers and cops as the risk. After school, push the main Rock the School missions, earn extra cash, ride a bike around town, then shop or roam before the next school day."
 related:
   - agefield-high-rock-the-school/classes
   - agefield-high-rock-the-school/how-to-make-money
+  - agefield-high-rock-the-school/map-locations
 sidebar:
   label: Gameplay
   order: 4
   badge: Confirmed
-lastUpdated: 2026-08-13
+lastUpdated: 2026-08-15
 head:
   - tag: title
-    content: "Agefield High Gameplay: Classes, Open World & Activities"
+    content: "Agefield High Gameplay: School Day, Missions & Beginner Loop"
   - tag: meta
     attrs:
       property: og:title
-      content: "Agefield High Gameplay: Classes, Open World & Activities"
+      content: "Agefield High Gameplay: School Day, Missions & Beginner Loop"
   - tag: script
     attrs:
       type: application/ld+json
@@ -52,62 +54,113 @@ head:
         "mainEntity": [
           {
             "@type": "Question",
-            "name": "Does Agefield High have an open world?",
+            "name": "How does a school day work in Agefield High?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Yes. Official materials describe a small open world featuring the school campus, two neighborhoods, the town center, and the countryside."
+              "text": "On weekdays, classes run until the afternoon. After that, you use free time for main missions, side jobs, shopping, and exploration before the next school day."
             }
           },
           {
             "@type": "Question",
-            "name": "Can you skip class in Agefield High?",
+            "name": "Should you attend or skip class in Agefield High?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Yes. The Time & School System lets players attend classes on weekdays or skip class to explore and take on other activities, with teachers and cops as risks if you break the rules."
+              "text": "Attend class if you want grades and the pocket money tied to them. Skip class if you want extra time to explore or take side jobs. Skipping is allowed, but teachers and cops are the stated risk."
             }
           },
           {
             "@type": "Question",
-            "name": "What classes are in Agefield High?",
+            "name": "Do grades matter in Agefield High?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Official materials list five lesson types: English, Math, Geography, German, and Music."
+              "text": "Yes, but mainly as an income path. The tutorial states that pocket money depends on your grades. One verified German perfect score paid $20. This guide does not treat grades as a proven ending or mission-lock system."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "When do you do main missions in Agefield High?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The campaign is the Rock the School plan with Kale and Axel. After class time, use the afternoon and evening window to push those story missions, then earn cash or explore before the next weekday."
             }
           }
         ]
       }
 ---
 
-This page summarizes officially confirmed gameplay systems for **Agefield High: Rock the School**. **Agefield High: Rock the School is a single-player game.** Agefield High: Rock the School released on PC via Steam on August 12, 2026. Details below are based on the Steam store page, official trailers, and publisher materials. Hands-on playtesting details that are not yet independently verified are marked as such.
+**Agefield High: Rock the School** plays as a weekday loop, not a menu of disconnected systems. Agefield High is a single-player game. It released on PC via Steam on August 12, 2026.
 
-## Open-world structure
+On a school day you decide whether to attend class, collect the pocket money tied to grades, then spend the after-school window on the main Rock the School missions, side jobs, bike travel, shopping, and exploration. The next weekday starts the loop again.
 
-Agefield High is a small, handcrafted open world: school campus, two neighborhoods, town center, and countryside. Full area notes are on the [Agefield High Map & Locations](/agefield-high-rock-the-school/map-locations/) guide.
+This page is the practical beginner loop. Class answers live on the [Classes](/agefield-high-rock-the-school/classes/) guide. Cash methods live on [How to Make Money](/agefield-high-rock-the-school/how-to-make-money/). Area uses live on [Map & Locations](/agefield-high-rock-the-school/map-locations/).
 
-## Time & school system
+## The daily loop
 
-On weekdays, classes run until the afternoon. You can attend or skip class. The five lesson types — English, Math, Geography, German, and Music — each use a verified mini-game (spelling, arithmetic, map quiz, translation, or guitar rhythm). The tutorial links grades to pocket money. Partial verified answer pools and schedule notes are on the [Agefield High Classes & School System](/agefield-high-rock-the-school/classes/) guide; a full weekly timetable is still being verified.
+Use this order on your first weekdays:
 
-## Main missions and endings
+1. **School day starts** — check the timetable and get to campus.
+2. **Attend or skip class** — grades and pocket money versus extra free time.
+3. **Grades / allowance** — better class performance feeds pocket money.
+4. **After-school main mission** — push the Rock the School story with Kale and Axel.
+5. **Side job / money** — lawn mowing, food delivery, or other listed cash activities if you need spending money.
+6. **Bike / town exploration** — move between campus, neighborhoods, town center, and countryside.
+7. **Shopping / activities** — spend cash on bikes, clothes, and other shop items, or keep roaming.
+8. **Next school day** — the weekday loop repeats.
 
-The campaign centers on the “Rock the School” plan with friends Kale and Axel. Official feature lists currently cite:
+Official materials describe a short-to-medium campaign (about 8–10 hours in store copy). Treat that as an official estimate, not a verified playtime from this guide.
 
-- About **8–10 hours** of story / total gameplay duration
-- **~30–32 main missions** (Steam currently says 32; some official console listings say 30)
-- **Two different endings** based on player choices
-- Prom includes an important choice (Steam store copy)
+## Attend or skip class
 
-## Side activities
+On weekdays, classes run until the afternoon. You can attend or skip.
 
-Official materials mention roughly **15 side missions / activities**, including lawn mowing, food delivery jobs, and prank calling as ways to earn cash. The official Steam announcement also says the game includes collectibles and secrets to discover; counts and locations are not verified. Confirmed money paths and what is still unverified are on [How to Make Money in Agefield High](/agefield-high-rock-the-school/how-to-make-money/).
+Attending is the school-side income path. Each lesson is a mini-game: English spelling, Math arithmetic, Geography map quiz, German translation, or Music guitar rhythm. You need to reach the right room on time; the timetable changes by weekday.
 
-## Combat
+Skipping is allowed. Official copy frames it as extra time to explore and take side missions, with **teachers and cops** as the risk. Exact penalty numbers are <span class="unconfirmed">not fully verified</span>.
 
-Official Steam guidance describes combat as intentionally straightforward — “no fifty-button combo system.” Trailer narration also shows Sam using punches, leg kicks, and a shove to break defense. Detailed combat tier lists, best weapons, or meta strategies are <span class="unconfirmed">not officially confirmed</span>.
+For verified lesson mechanics and partial answer pools, use the [Agefield High Classes & School System](/agefield-high-rock-the-school/classes/) guide.
 
-## Shopping, bikes, and customization
+## Grades, school performance, and allowance
 
-Players can spend earned money at shops. Official lists include:
+Grades are not cosmetic. The in-game tutorial states that **pocket money depends on your grades**. One verified German perfect-score run awarded **$20**.
+
+What is confirmed:
+
+- Class performance produces a grade.
+- Better grades feed pocket money / allowance.
+- That money is spent in town shops.
+
+What this page does **not** claim:
+
+- Grades lock or unlock a specific ending.
+- A complete payout table for every subject and every grade.
+- That skipping class is always better than attending, or the reverse.
+
+$20 is one verified German result, not a universal perfect-class payout. Full grade-to-cash mapping is still incomplete on the [money guide](/agefield-high-rock-the-school/how-to-make-money/).
+
+## After-school main missions
+
+Once class time is over, the useful next step is the story. The campaign is Kale’s **Rock the School** plan, with Sam and Axel as the core trio.
+
+Use the after-school window to check in on the current main mission before you disappear into side jobs. Official materials say player choices can lead to **two different endings**, and that Prom includes an important choice. This page does not publish ending routes, trigger conditions, or a mission-by-mission walkthrough — those still need independently verified player evidence.
+
+Store listings disagree on a main-mission total, so this guide does not treat any advertised count as a verified number.
+
+## Side jobs and money
+
+If you need cash beyond class allowance, official materials confirm side missions and activities. Named examples include **lawn mowing**, **food delivery**, and **prank calling**. Feature lists mention roughly 15 side missions / activities; treat that as official copy, not a verified in-game checklist.
+
+Confirmed money paths:
+
+1. Good grades → pocket money.
+2. Side missions / activities → extra cash.
+
+Exact payouts, cooldowns, and the fastest repeatable farm are <span class="unconfirmed">not independently verified</span>. Details stay on [How to Make Money in Agefield High](/agefield-high-rock-the-school/how-to-make-money/).
+
+## Bikes, town travel, and shopping
+
+Agefield is a small open world: school campus, two neighborhoods, town center, and countryside. A bike is the practical way to move between those areas after school.
+
+Official shop lists include:
 
 - Bikes
 - Clothes
@@ -116,15 +169,69 @@ Players can spend earned money at shops. Official lists include:
 - Accessories
 - Other shop items (Steam also mentions dirty magazines)
 
-Official Steam copy lists several bicycle types players can buy or use, including BMX bikes, country bikes, and racing bikes. Specific prices, stats, unlocks, and routes are <span class="unconfirmed">not yet independently verified</span>.
+Steam names **BMX**, **country**, and **racing** bikes as types you can buy or use. Country bikes are mentioned for off-roading, including woods behind the school. Prices, stats, unlocks, and whether Sam starts with a bike are <span class="unconfirmed">not independently verified</span>.
 
-## What this page does not cover yet
+For what each area is actually for, see [Agefield High Map & Locations](/agefield-high-rock-the-school/map-locations/).
 
-- Best early-game strategies
-- Class answers
+## Basic combat
+
+Combat is intentionally simple. Official Steam copy describes it as having **no fifty-button combo system**.
+
+Confirmed basic actions:
+
+- **Punch**
+- **Kick**
+- **Block**
+- **Shove** — shown as a way to break defense
+
+That is enough to get through early fights. This is not a combat guide: there is no verified combo list, weapon tier list, boss strategy, or control-scheme table here.
+
+## What a new player should do first
+
+On your first school days, keep the loop small:
+
+1. Learn the timetable and how to reach classrooms.
+2. Attend at least some classes so you see how grades pay pocket money.
+3. After school, follow the current Rock the School mission before grinding jobs.
+4. Pick up a cash activity if you need spending money.
+5. Get comfortable riding between campus and town.
+6. Buy useful movement or cosmetic items only after you have a reason to spend.
+
+Do not start by hunting a 100% list. Collectibles exist, but counts and locations are not verified on this site.
+
+## Common beginner mistakes
+
+- **Treating grades as flavor text.** Pocket money is tied to school performance.
+- **Skipping class with no plan.** Extra free time is real, but teachers and cops are the stated risk.
+- **Ignoring the after-school story.** Side jobs earn cash; they are not a substitute for the Rock the School missions.
+- **Expecting a huge map.** The world is small and handcrafted. Learn the four area types instead of searching for a AAA-scale map.
+- **Waiting for a collectible checklist.** Secrets exist; this guide will not invent a count or pin list.
+- **Looking for an ending guide here.** Two endings are confirmed. Trigger conditions are not.
+
+## What this page still does not cover
+
+- Mission-by-mission walkthroughs
+- Ending routes or trigger conditions
 - Fastest money methods
-- Mission walkthroughs
-- Ending spoilers beyond the confirmed existence of two endings
-- Collectible lists, locations, or completion requirements
+- Collectible counts, locations, or 100% requirements
+- A full combat guide
 
-Those topics still need independently verified gameplay information. For character roles, see [Agefield High Characters](/agefield-high-rock-the-school/characters/). For PC release status, see [Agefield High Release Date & Platforms](/agefield-high-rock-the-school/release-date/).
+For characters, see [Agefield High Characters](/agefield-high-rock-the-school/characters/). For PC release status, see [Agefield High Release Date & Platforms](/agefield-high-rock-the-school/release-date/).
+
+## Agefield High Gameplay FAQ
+
+### How does a school day work in Agefield High?
+
+On weekdays, classes run until the afternoon. After that, use free time for main missions, side jobs, shopping, and exploration before the next school day.
+
+### Should you attend or skip class?
+
+Attend if you want grades and the pocket money tied to them. Skip if you want extra time to explore or take jobs. Skipping is allowed; watch for teachers and cops.
+
+### Do grades matter?
+
+Yes, mainly as income. Pocket money depends on grades. One verified German perfect score paid $20. This guide does not treat grades as a proven ending lock.
+
+### When do you do main missions?
+
+After class time. Push the Rock the School story in the after-school window, then earn cash or explore before the next weekday.

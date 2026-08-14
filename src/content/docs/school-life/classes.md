@@ -9,6 +9,7 @@ quickAnswer: "Agefield High has five school classes — English (spelling), Math
 related:
   - agefield-high-rock-the-school/how-to-make-money
   - agefield-high-rock-the-school/gameplay
+  - agefield-high-rock-the-school/map-locations
 sidebar:
   label: "Classes & School System"
   order: 1
@@ -121,7 +122,7 @@ This page publishes only answers and mechanics confirmed from in-game worksheets
 
 ## How Classes Work
 
-On weekdays, Sam attends classes on a schedule that changes by day. Each lesson starts at a set time; you need to reach the correct classroom beforehand. Near class time, the map helps locate the room. You can arrive late.
+On weekdays, Sam attends classes on a schedule that changes by day. Each lesson starts at a set time; you need to reach the correct classroom beforehand. Near class time, the map helps locate the room. You can arrive late. Campus notes are on the [Agefield High Map & Locations](/agefield-high-rock-the-school/map-locations/) guide.
 
 Classes are timed interactive worksheets or mini-games. Performance produces a grade, and better grades feed into pocket money.
 
@@ -302,7 +303,7 @@ Full weekly timetable verification is <span class="unconfirmed">in progress</spa
 | Math | Arithmetic mechanism only | No answer list yet |
 | Music | Guitar rhythm mini-game | No quiz answers |
 
-Related: [Agefield High Gameplay](/agefield-high-rock-the-school/gameplay/) · [How to Make Money in Agefield High](/agefield-high-rock-the-school/how-to-make-money/)
+Related: [Agefield High Gameplay](/agefield-high-rock-the-school/gameplay/) · [How to Make Money in Agefield High](/agefield-high-rock-the-school/how-to-make-money/) · [Agefield High Map & Locations](/agefield-high-rock-the-school/map-locations/)
 
 ## Agefield High Classes FAQ
 

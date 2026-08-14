@@ -9,6 +9,7 @@ quickAnswer: "Go to class for steady pocket money, or skip class to chase side j
 related:
   - agefield-high-rock-the-school/classes
   - agefield-high-rock-the-school/map-locations
+  - agefield-high-rock-the-school/gameplay
 sidebar:
   label: How to Make Money
   order: 2
@@ -100,7 +101,7 @@ Exact payouts for every method, cooldowns, and a fastest farm method are <span c
 
 ## Earn Money by Getting Good Grades
 
-Steam store copy and the in-game tutorial both link pocket money to grades. That is the confirmed school-side income path. Class list, mini-game mechanics, and verified answer pools are covered in the [Agefield High Classes & School System](/agefield-high-rock-the-school/classes/) guide.
+Steam store copy and the in-game tutorial both link pocket money to grades. That is the confirmed school-side income path. Class list, mini-game mechanics, and verified answer pools are covered in the [Agefield High Classes & School System](/agefield-high-rock-the-school/classes/) guide. For how that allowance fits a school day, see [Agefield High Gameplay](/agefield-high-rock-the-school/gameplay/).
 
 One verified German perfect-score class run awarded **$20**. A full payout table for every grade in every subject is <span class="unconfirmed">still incomplete</span>.
 
