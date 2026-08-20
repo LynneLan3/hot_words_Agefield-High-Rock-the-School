@@ -22,6 +22,15 @@ export interface GamePortalConfig {
 	showAbout?: boolean;
 }
 
+export type AnalyticsProvider = 'ga4';
+
+export interface GameAnalyticsConfig {
+	enabled: true;
+	provider: AnalyticsProvider;
+	measurementId: string;
+	trackOutbound: boolean;
+}
+
 export interface GameConfig {
 	name: string;
 	shortName: string;
@@ -44,6 +53,7 @@ export interface GameConfig {
 	categories: readonly GameCategory[];
 	/** Optional Hub portal presentation. GamePortal reads this; do not fork the component per game. */
 	portal?: GamePortalConfig;
+	analytics?: GameAnalyticsConfig;
 }
 
 /**
@@ -102,6 +112,12 @@ export const game: GameConfig = {
 		showRecentlyUpdated: true,
 		maxRecent: 3,
 		showAbout: false,
+	},
+	analytics: {
+		enabled: true,
+		provider: 'ga4',
+		measurementId: 'G-018TGF2YT4',
+		trackOutbound: true,
 	},
 	categories: [
 		{
